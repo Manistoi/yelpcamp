@@ -36,7 +36,8 @@ mongoose.connect("mongodb://localhost/yelp_camp");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public")); // __dirname = "/home/ubuntu/workspace/YelpCamp/v3"
-seedDB();
+
+// seedDB(); // seed the database
 
 
 //REQUIRING ROUTES

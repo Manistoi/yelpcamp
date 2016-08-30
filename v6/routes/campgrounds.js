@@ -16,11 +16,17 @@ router.get("/", function(req, res){
   //The "campgrounds" refers to the file we are passing the information to
 });                                                         //The second campgrounds is the name; the third is the actual info we are passing in
 
-router.post("/", function(req, res){
+
+//CREATE ROUTE
+router.post("/", isLoggedIn, function(req, res){
    var name = req.body.name;
    var image = req.body.image;
    var desc = req.body.description;
-   var newCampground = {name: name, image: image, description: desc};
+   var author = {
+      id: req.user._id,
+      username: req.user.username
+   }
+   var newCampground = {name: name, image: image, description: desc, author: author};
    Campground.create(newCampground, function(err, newlyCreated){
       if(err) {
          console.log(err);
@@ -32,7 +38,8 @@ router.post("/", function(req, res){
    });
 });
 
-router.get("/new", function(req, res) {
+//NEW
+router.get("/new", isLoggedIn, function(req, res) {
    res.render("campgrounds/new"); 
 });
 
@@ -48,5 +55,13 @@ router.get("/:id", function(req, res){
       }
    }); 
 });
+
+//middleware
+function isLoggedIn(req, res, next){
+   if(req.isAuthenticated()){
+      return next();
+   }
+   res.redirect("/login");
+}
 
 module.exports = router;

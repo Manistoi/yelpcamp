@@ -16,13 +16,13 @@ router.get("/register", function(req, res) {
 //handle signup logic
 router.post("/register", function(req, res){
    var newUser = new User({username: req.body.username});
-   User.register(newUser, req.body.password, function(err, user){  //simply passing the password in as a second argument
-      if(err){                                                       //the "user" in this callback function is the new user we created
+   User.register(newUser, req.body.password, function(err, user){
+      if(err){
          console.log(err);
-         return res.render("register"); //return here allows us to exit from the callback function
+         return res.render("register");
       }
       else {
-         passport.authenticate("local")(req, res, function(){  //local here refers to the strategy
+         passport.authenticate("local")(req, res, function(){
              res.redirect("/campgrounds");
          });
       }

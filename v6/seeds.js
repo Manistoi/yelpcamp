@@ -17,32 +17,32 @@ var data = [
 
 function seedDB(){
     Campground.remove({}, function(err){
-    if(err){
-        console.log(err);
-    }
-    console.log("removed campgrounds");
-    });
-    //add a few campgrounds
-    data.forEach(function(seed){
-        Campground.create(seed, function(err, campground){
-            if(err){console.log(err);}
-            else {
-                console.log("Added a campground");
-                //Create a campground
-                Comment.create({text: "This place is great, but I wish there was internet!",
-                    author: "Homer Simpson"
-                }, function(err, comment){
-                        if(err){
-                            console.log(err);
-                        }
-                        else {
-                            campground.comments.push(comment);
-                            campground.save();
-                            console.log("created new comment!");
-                        }
-                })
-            }
-        });
+    // if(err){
+    //     console.log(err);
+    // }
+    // console.log("removed campgrounds");
+    // });
+    // //add a few campgrounds
+    // data.forEach(function(seed){
+    //     Campground.create(seed, function(err, campground){
+    //         if(err){console.log(err);}
+    //         else {
+    //             console.log("Added a campground");
+    //             //Create a campground
+    //             Comment.create({text: "This place is great, but I wish there was internet!",
+    //                 author: "Homer Simpson"
+    //             }, function(err, comment){
+    //                     if(err){
+    //                         console.log(err);
+    //                     }
+    //                     else {
+    //                         campground.comments.push(comment);
+    //                         campground.save();
+    //                         console.log("created new comment!");
+    //                     }
+    //             })
+    //         }
+    //     });
     });
     //add a few comments
 };
