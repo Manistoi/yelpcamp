@@ -1,0 +1,125 @@
+body{
+    background-color: rgba(98, 237, 0, 0.1);
+}
+
+.navbar-default {
+    font-family: 'Lora', serif;
+    font-size: 15px;
+    background-color: white;
+}
+
+.jumbotron {
+     font-family: 'Lora', serif;
+     background-color: white;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 25em;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+/*Give navbar links a black color*/
+.navbar-default .navbar-nav > li > a {
+    color: black;
+}
+
+#delete-form {
+    display: inline;
+}
+
+#landingBody {
+    background-image: url("https://hd.unsplash.com/photo-1468245856972-a0333f3f8293");
+    background-size: 100% 265%;
+}
+
+#content2 {
+    display: table;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+#landingh1 {
+    font-family: 'Lobster', cursive;
+    font-size: 96px;
+    margin-top: 62px;
+}
+
+#landingp {
+    font-size: 25px;    
+}
+
+#landingb {
+    margin: 2% 43%;
+}
+
+#landinga {
+    color: black;
+}
+
+/* Take off bottom margin for comments section */
+.well { 
+    margin-bottom: 0;     
+}
+
+/* Assign equal height to campground images */
+#indeximg {
+    height: 200px;
+}
+
+/*Style login box on login page*/
+#content4 {
+    color: white;
+    display: table;
+    margin: 0 auto;
+    border: 1px solid black;
+    text-align: center;
+    padding: 25px 195px 220px 195px;
+    background-image: url("https://hd.unsplash.com/photo-1458724029936-2cc6ee38f5ef");
+    background-size: 100% 265%;
+    margin-bottom: 15px;
+}
+
+/*Style h1 on login page*/
+#loginh1 {
+    font-size: 50px;
+    margin-bottom: 16px;   
+}
+
+/*Button on login and register pages - text color: white*/
+#loginbtn {
+    color: black;
+}
+
+/*Style login box on register page*/
+#content5 {
+    color: white;
+    display: table;
+    margin: 0 auto;
+    border: 1px solid black;
+    text-align: center;
+    padding: 25px 195px 220px 195px;
+    background-image: url("https://hd.unsplash.com/photo-1458724029936-2cc6ee38f5ef");
+    background-size: 100% 265%;
+    margin-bottom: 15px;
+}
+
+/* H1 in register form*/
+#registerh1 {
+    font-size: 50px;
+    margin-bottom: 16px;     
+}
+
+/*Give register and login a transparent green background color*/
+#body1 {
+    background-color: rgba(98, 237, 0, 0.1);
+}
+
